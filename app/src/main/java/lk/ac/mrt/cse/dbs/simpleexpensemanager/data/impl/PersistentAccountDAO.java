@@ -21,6 +21,7 @@ public class PersistentAccountDAO implements AccountDAO {
     public PersistentAccountDAO(SQLiteDatabase sqLiteDatabase) {
         this.accounts = new HashMap<>();
         this.sqLiteDatabase = sqLiteDatabase;
+        //load account details to a hashmap
         loadAccountData();
     }
 

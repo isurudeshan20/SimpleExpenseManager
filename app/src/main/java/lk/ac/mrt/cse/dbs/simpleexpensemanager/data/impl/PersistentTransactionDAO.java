@@ -23,6 +23,7 @@ public class PersistentTransactionDAO implements TransactionDAO {
         this.transactions = new LinkedList<>();
         this.sqLiteDatabase = sqLiteDatabase;
         this.simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        //load transaction details to a list
         loadTransactions();
     }
 

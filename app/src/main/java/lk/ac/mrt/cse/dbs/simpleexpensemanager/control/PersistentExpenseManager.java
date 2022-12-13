@@ -19,9 +19,11 @@ public class PersistentExpenseManager extends ExpenseManager {
 
     @Override
     public void setup() {
+        //creating a dbhelper object and getting a writtable database
         DBHelper dbHelper = new DBHelper(context);
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
 
+        //calling the constructors of persistent transaction DAO and persistent account DAO
         TransactionDAO persistentTransactionDAO = new PersistentTransactionDAO(sqLiteDatabase);
         setTransactionsDAO(persistentTransactionDAO);
 
